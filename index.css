@@ -1,0 +1,264 @@
+/* 
+#757575
+#8C8C8C
+#A3A3A3
+#BABABA
+#D1D1D1
+#E8E8E8
+#B3B3B3
+#CCCCCC
+#E5E5E5
+
+#A49BF8 #B8B9FA #DBD5FB #B3C9FB
+*/
+
+/* :root {
+  --primary-color:	#9dd5d4; 
+  --background-color:#E5E5E5;
+  --bar-width:2px;
+  --bar-height:20px;
+  --bar-color:#333;
+} */
+
+:root {
+  --primary-color:	#A49BF8; 
+  --background-color:#DBD5FB;
+  --bar-width:2px;
+  --bar-height:20px;
+  --bar-color:#333;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--background-color);
+}
+
+a {
+  color: #000;
+  transition: linear 1s;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+/* header */
+
+.header {
+  background-color: var(--background-color);
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top:0;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  list-style: none;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: var(--primary-color);
+  background-color: #f4f4f4;
+  transform: scale(1.1);
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 1.8em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .nav-icon {
+  background: var(--bar-color);
+  display: block;
+  height: var(--bar-width);
+  position: relative;
+  transition: background .2s ease-out;
+  width: var(--bar-height);
+  border-radius: 30px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: var(--bar-color);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 260px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+
+/* 48em = 768px @ 16pt font */
+
+@media (min-width: 48em) {
+  .header ul {
+    font-size: 1.3rem;
+  }
+ 
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+.hero-banner {
+  height:750px;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.bio {
+  text-align: center;
+}
+
+.bio p {
+  margin: 1.5rem;
+}
+
+.bio-hello {
+  font-size: 1.5rem;
+}
+
+.bio-name {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+.bio-pos {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+}
+
+.profile {
+  width: 350px;
+  height: 350px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+p {
+  color: black;
+  font-size: 1.2rem;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+.social-icon {
+  width: 30x;
+  height: 30px;
+  margin: 10px;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  transition: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+@media (max-width:48em) {
+  .hero-banner {
+    height: 600px;
+    padding: 4rem 0rem 2rem;
+    flex-direction: column-reverse;
+  }
+
+  .profile {
+    width: 250px;
+    height: 250px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

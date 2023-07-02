@@ -2,36 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="mystyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <nav>
-        <div>
-            <h1>Helping Hand</h1>
-        </div>
-        <div>
-            <ul>
-                <li><a>Home</a></li>
-                <li><a>About us</a></li>
-                <li><a>Contact us</a></li>
-            </ul>
-        </div>
-    </nav>
-    <footer>
-        <div>
-            <p><span>&#169;</span> All Rights Reserved</p>
-        </div>
-        <div>
-            <a><img src="social-icon/instagram.png"></a>
-            <a><img src="social-icon/facebook.png"></a>
-            <a><img src="social-icon/linkedin.png"></a>
-            <a><img src="social-icon/twitter.png"></a>
-        </div>
-    </footer>
+
+  <header class="header">
+    <a href="index.html" class="logo">Rushikesh</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </header>
+
+  <div class="hero-banner">
+    <div class="bio">
+      <p class="bio-hello">Hello , I'm </p>
+      <p class="bio-name">Rushikesh Meshram</p>
+      <p class="bio-pos">Web developer</p>
+    </div>
+    <div>
+      <img class="profile" src="pngegg.png" alt="Profile Photo" loading="lazy">
+    </div>
+  </div>
+
+  <footer>
+    <div>
+        <p><span>&#169;</span> All Rights Reserved</p>
+    </div>
+    <div>
+        <a href="https://www.instagram.com/rushikesh.meshram/"  target="_blank"><img class="social-icon" src="social-icon/instagram.png" loading="lazy"></a>
+        <a href="#" target="_blank"><img class="social-icon" src="social-icon/facebook.png" loading="lazy"></a>
+        <a href="#" target="_blank"><img class="social-icon" src="social-icon/linkedin.png" loading="lazy"></a>
+        <a href="#" target="_blank"><img class="social-icon" src="social-icon/twitter.png" loading="lazy"></a>
+    </div>
+</footer>
+
 </body>
 
 </html>
